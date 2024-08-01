@@ -3,6 +3,7 @@ package com.frankmoley.lil.fid.service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import com.frankmoley.lil.fid.aspect.Countable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class TimeService {
         super();
     }
 
-
+    @Countable
     public String getCurrentTime(){
         LocalDateTime now = LocalDateTime.now();
         if (is24) {
